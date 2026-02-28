@@ -1,0 +1,38 @@
+# Example prop-bot configuration
+# Copy to config/local.toml and customize
+
+[database]
+url = "postgres://propbot:propbot@localhost:5432/propbot"
+
+[server]
+bind = "0.0.0.0:3000"
+
+[broker.ninjatrader]
+host = "127.0.0.1"
+port = 5555
+reconnect_interval_secs = 5
+heartbeat_interval_secs = 10
+
+[broker.simulated]
+initial_balance = 50000
+commission_per_contract = 4.0
+slippage_ticks = 1
+tick_size = 0.25
+tick_value = 12.50
+
+[strategy.ma_crossover]
+instrument = "ES"
+fast_period = 10
+slow_period = 20
+quantity = 1
+ma_type = "ema"
+
+[strategy.donchian_breakout]
+instrument = "ES"
+channel_period = 20
+atr_period = 14
+atr_stop_multiplier = 2.0
+quantity = 1
+
+[risk]
+profile = "topstep_50k"

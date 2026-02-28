@@ -1,0 +1,17 @@
+[package]
+name = "propbot-risk"
+description = "Prop firm risk management engine"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+propbot-core = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+toml = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+rust_decimal_macros = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

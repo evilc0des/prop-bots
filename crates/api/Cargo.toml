@@ -1,0 +1,28 @@
+[package]
+name = "propbot-api"
+description = "REST + WebSocket API server"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+propbot-core = { workspace = true }
+propbot-engine = { workspace = true }
+propbot-data = { workspace = true }
+propbot-risk = { workspace = true }
+propbot-brokers-common = { workspace = true }
+propbot-strategies = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+axum = { workspace = true }
+axum-extra = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+sqlx = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

@@ -1,0 +1,95 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/engine",
+    "crates/strategies",
+    "crates/indicators",
+    "crates/data",
+    "crates/brokers/common",
+    "crates/brokers/ninjatrader",
+    "crates/brokers/metatrader",
+    "crates/brokers/crypto",
+    "crates/brokers/gui",
+    "crates/risk",
+    "crates/api",
+    "crates/cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/evilc0des/prop-bots"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# Database
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "postgres", "chrono", "rust_decimal", "uuid", "migrate"] }
+
+# Web framework
+axum = { version = "0.8", features = ["ws"] }
+axum-extra = { version = "0.10", features = ["typed-header"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+
+# Decimal arithmetic (no floating-point errors)
+rust_decimal = { version = "1", features = ["serde-with-str"] }
+rust_decimal_macros = "1"
+
+# Date/time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Logging/tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# CLI
+clap = { version = "4", features = ["derive", "env"] }
+
+# CSV parsing
+csv = "1"
+
+# HTTP client
+reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
+
+# WebSocket client
+tokio-tungstenite = { version = "0.24", features = ["rustls-tls-webpki-roots"] }
+futures-util = "0.3"
+
+# UUID
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# ONNX Runtime for ML inference
+ort = "2.0.0-rc.11"
+
+# GUI automation
+enigo = "0.2"
+
+# Async trait
+async-trait = "0.1"
+
+# Internal crates
+propbot-core = { path = "crates/core" }
+propbot-engine = { path = "crates/engine" }
+propbot-strategies = { path = "crates/strategies" }
+propbot-indicators = { path = "crates/indicators" }
+propbot-data = { path = "crates/data" }
+propbot-brokers-common = { path = "crates/brokers/common" }
+propbot-brokers-ninjatrader = { path = "crates/brokers/ninjatrader" }
+propbot-brokers-metatrader = { path = "crates/brokers/metatrader" }
+propbot-brokers-crypto = { path = "crates/brokers/crypto" }
+propbot-brokers-gui = { path = "crates/brokers/gui" }
+propbot-risk = { path = "crates/risk" }
+propbot-api = { path = "crates/api" }

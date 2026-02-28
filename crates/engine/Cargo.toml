@@ -1,0 +1,22 @@
+[package]
+name = "propbot-engine"
+description = "Backtest and live execution engine"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+propbot-core = { workspace = true }
+propbot-indicators = { workspace = true }
+propbot-brokers-common = { workspace = true }
+propbot-risk = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+rust_decimal_macros = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+tracing = { workspace = true }

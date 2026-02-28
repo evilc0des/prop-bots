@@ -1,0 +1,16 @@
+[package]
+name = "propbot-brokers-common"
+description = "Shared broker traits and types"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+propbot-core = { workspace = true }
+tokio = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+uuid = { workspace = true }
+tracing = { workspace = true }

@@ -1,0 +1,31 @@
+[package]
+name = "propbot-cli"
+description = "CLI binary for the prop-bots trading system"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "propbot"
+path = "src/main.rs"
+
+[dependencies]
+propbot-core = { workspace = true }
+propbot-engine = { workspace = true }
+propbot-data = { workspace = true }
+propbot-risk = { workspace = true }
+propbot-api = { workspace = true }
+propbot-brokers-common = { workspace = true }
+propbot-brokers-ninjatrader = { workspace = true }
+propbot-strategies = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+clap = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+uuid = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+sqlx = { workspace = true }

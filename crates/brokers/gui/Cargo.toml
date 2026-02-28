@@ -1,0 +1,19 @@
+[package]
+name = "propbot-brokers-gui"
+description = "GUI automation broker adapter for platforms without APIs"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+propbot-core = { workspace = true }
+propbot-brokers-common = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+uuid = { workspace = true }
+tracing = { workspace = true }
+enigo = { workspace = true }
