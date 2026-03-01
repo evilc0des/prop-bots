@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-background: var(--color-gray-950);
+    --color-foreground: var(--color-gray-50);
+    --color-primary: var(--color-blue-500);
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
